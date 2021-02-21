@@ -13,10 +13,10 @@
 <body>
 
   <!-- Style main to be able to use justify/align tools, force new rows  -->
-  <main class="d-flex min-vh-100 justify-content-center">
+  <main class="d-flex min-vh-100 justify-content-around">
 
         <!-- First, create a responsive container for the quiz  -->
-        <div class="container-fluid mt-25 mb-auto justify-content-center">
+        <div class="container-fluid mt-25 mb-auto justify-content-around">
             <h1 class="display-3 text-center" id="question-holder">Welcome to the Coding Quiz!</h1>
 
             <!-- Add an alert to give info about the quiz -->
@@ -27,31 +27,30 @@
                 </button>
               </div>
             
-                <div class="row justify-content-center">
+                <div class="row justify-content-around">
 
-                    <div class="col-12 col-md-9 p-4 bg-dark">
-
-                        <div class="row justify-content-center" id="answer-holder">
+                    <div class="col-12 col-md-9 p-4 bg-dark d-flex justify-content-around" id="answer-holder">
                             
-                            <!-- Add a start quiz button -->
-                            <div class="col-md-3 col-sm-12">
-                                <btn class="btn btn-block p-3 my-2 btn-info" id="start-quiz">Start Quiz!</btn>
-                            </div>
-
-                        </div>
-                    </div>                   
+                        <!-- Add a start quiz button -->
+                        <div class="col-md-3 col-sm-12 row" id="quiz-holder">
+                            <btn class="btn btn-block p-3 my-2 btn-info" id="start-quiz">Start Quiz!</btn>
+                         </div>
+                        
+                    </div> 
+                 
+                                     
 
         <!-- Add a row for the Score and Timer -->
         <div class="row col-12 col-md-9 p-3">
 
             <!-- Score -->
             <div class="col-6 text-left">
-                <h4>0/0</h4>
+                <h4 id="score-holder">0</h4>
             </div>
 
             <!-- Timer -->
             <div class="col-6 text-right">
-                <h4>1:00</h4>
+                <h4 id="quiz-timer">60</h4>
             </div>
 
         </div>
